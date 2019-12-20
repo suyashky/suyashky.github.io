@@ -1,0 +1,172 @@
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(#c31432,#402625);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper{    
+    background-color: white;
+    width: 900px;
+    height: 540px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 50px rgba(0, 9, 0, 0.3);
+    overflow: hidden;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.player-0-panel,
+.player-1-panel{
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding-top: 78px;
+    background-image: linear-gradient(#ebe9e9,#f8f6f6);
+}
+
+.player-name{
+    text-align: center;
+    font-size: 37px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.player-score{
+    text-align: center;
+    font-size: 65px;
+    font-weight: 100;
+    color: #fa285c;
+    margin-top: 25px;
+}
+
+.active{
+    background-image: linear-gradient(white,white);
+}
+
+.active .player-name{
+    font-weight: 500;
+}
+
+.active .player-name::after{
+    content: "\2022";
+    font-size: 40px;
+    position: absolute;
+    top: -5px;
+    right: 90px;
+    color: #f02857;
+}
+
+.player-current-box{
+    background-color: #e5003d;
+    width: 20%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.player-current-label{
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+.player-current-score{
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+button{
+    position: absolute;
+    width: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: font-weight 0.1s, color 0.4s;
+    padding: 3px;
+    background: none;
+}
+
+.allow{
+    cursor: pointer;
+}
+
+.block{
+    cursor: not-allowed;
+}
+
+button:hover{
+    font-weight: 400;
+}
+
+button:hover .i{
+    padding-left: 3px;
+}
+
+.btn-new{ 
+    cursor: pointer;
+    top: 26px;
+}
+
+.btn-roll{ 
+    top: 404px;
+}
+
+.btn-hold{ 
+    top: 455px;
+}
+
+.i{
+    color: #e10e3f;
+    position: relative;
+    top: 4px;
+    right: 3px;
+    font-size: 22px;
+    font-weight: 100px;
+}
+
+.dice{
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 170px;
+    transform: translateX(-50%);
+    box-shadow: 0px 10px 50px rgba(0, 8, 0, 0.3);
+}
+
+.winner{
+    background-image: linear-gradient(white,white);
+}
+
+.winner .player-name{
+    font-weight: 600;
+    color: #f02857;
+}
